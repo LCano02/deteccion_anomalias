@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Transacción</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Formulario de Transacción</h1>
+
+    <div class="resultado" style="display: {% if resultado %} block {% else %} none {% endif %};">
+        <h2>Resultado de la Transacción</h2>
+        {% if resultado %}
+        <p>{{ resultado }}</p>
+        {% else %}
+        <p>Error al procesar la transacción.</p>
+        {% endif %}
+        <a href="javascript:void(0);" onclick="mostrarFormulario()">Volver al formulario</a>
+    </div>
+
+    <form method="post" id="formulario" style="display: {% if not resultado %} block {% else %} none {% endif %};">
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" id="fecha" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" name="hora" id="hora" required>
+
+        <label for="monto">Monto:</label>
+        <input type="number" name="monto" id="monto" required>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div class="grafico" style="display: {% if resultado %} block {% else %} none {% endif %};">
+        <h2>Gráfico de Clasificación de Transacciones</h2>
+        <img src="data:image/png;base64,{{ graph }}" alt="Gráfico de Clasificación">
+    </div>
+
+
+    <script>
+        function mostrarFormulario() {
+            document.querySelector('.resultado').style.display = 'none';
+            document.getElementById('formulario').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

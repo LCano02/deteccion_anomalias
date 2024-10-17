@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 10px rgb(255, 187, 0);
+}
+
+.resultado {
+    background-color: #e7f3fe;
+    border: 1px solid #b3d4fc;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: none; /* Oculto por defecto */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    background-color: #fffae6; /* Color suave y cálido para resaltar */
+    border: 1px solid #ffd600; /* Borde dorado para mayor contraste */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em; /* Aumentar tamaño de fuente */
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #007bff; /* Cambiar color al pasar el ratón */
+}
+
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1em; /* Aumentar tamaño de fuente */
+}
+
+input[type="date"]:hover,
+input[type="time"]:hover,
+input[type="number"]:hover {
+    background-color: #d9d9d9;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7); /* Sombra al enfocar */
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 15px; /* Aumentar el padding */
+    font-size: 1.1em; /* Aumentar tamaño de fuente */
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bold; /* Negrita para el enlace */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.grafico {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 0.5s;
+    border-radius: 8px;
+    overflow: hidden; /* Redondear las esquinas de la imagen */
+}
+
+.grafico img {
+    max-width: 100%; /* Ajustar imagen al contenedor */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
